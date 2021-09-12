@@ -108,6 +108,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 " Plugins {{{
 " -----------------------------------------------------------------------------
+filetype plugin on
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'neoclide/coc.nvim'
@@ -116,6 +118,8 @@ Plug 'kovetskiy/sxhkd-vim'
 Plug 'weakish/rcshell.vim'
 Plug 'vmchale/dhall-vim'
 Plug 'purescript-contrib/purescript-vim'
+Plug 'junegunn/goyo.vim'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 " -----------------------------------------------------------------------------
 " }}}
@@ -143,3 +147,7 @@ set background=dark
 colorscheme PaperColor
 " -----------------------------------------------------------------------------
 " }}}
+
+let mapleader=","
+
+nnoremap <leader>z :Goyo<CR>
