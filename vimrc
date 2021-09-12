@@ -1,3 +1,5 @@
+" vim: foldmethod=marker
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'NLKNguyen/papercolor-theme'
@@ -9,6 +11,8 @@ Plug 'vmchale/dhall-vim'
 Plug 'purescript-contrib/purescript-vim'
 call plug#end()
 
+" Basic stuff {{{
+" -----------------------------------------------------------------------------
 " I don't care about Vim being Vi-compatible.
 set nocompatible
 
@@ -34,6 +38,8 @@ set encoding=utf-8
 " Any bell is annoying as hell. This will disable both beeps and flashes.
 set visualbell
 set t_vb=
+" -----------------------------------------------------------------------------
+" }}}
 
 " Shows the line and column number of the cursor position. If the number of
 " characters displayed is different from the number of bytes in the text, both
