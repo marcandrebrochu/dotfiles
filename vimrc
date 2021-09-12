@@ -11,6 +11,10 @@ set encoding=utf-8
 " disk. Also used for the CursorHold autocommand event.
 set updatetime=300
 
+" Visualize trailing whitespaces.
+set listchars=trail:·
+set list
+
 " Terminal behavior {{{
 " -----------------------------------------------------------------------------
 " Any bell is annoying as hell. This will disable both beeps and flashes.
