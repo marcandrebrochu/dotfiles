@@ -44,10 +44,10 @@ set nowritebackup
 
 " Interface configuration {{{
 " -----------------------------------------------------------------------------
-" Shows the line and column number of the cursor position. If the number of
-" characters displayed is different from the number of bytes in the text, both
-" the text column (byte number) and the screen column are shown.
-set ruler
+set statusline=%f%y%([%R%M]%)%=%l:%c%V\ %P
+
+" Always show the status line, even if there is only one window.
+set laststatus=2
 
 " If in Insert, Replace or Visual mode, put a message on the last line.
 set showmode
