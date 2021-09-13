@@ -201,7 +201,7 @@ endfunction
 function! SetupEmail()
   " When writing emails, I like to not have logical linebreaks inserted into
   " my text. It's better to let my MUA flow the text usually.
-  setlocal tw=0
+  setlocal textwidth=0
   setlocal wrap
   setlocal linebreak
 
