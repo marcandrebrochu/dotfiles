@@ -112,11 +112,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 " Plugins {{{
 " -----------------------------------------------------------------------------
-filetype plugin on
-
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'neoclide/coc.nvim'
 Plug 'elzr/vim-json'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'weakish/rcshell.vim'
@@ -124,13 +121,16 @@ Plug 'vmchale/dhall-vim'
 Plug 'purescript-contrib/purescript-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'lifepillar/vim-solarized8'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 " -----------------------------------------------------------------------------
 " }}}
 
 " Syntax highlighting and theme {{{
 " -----------------------------------------------------------------------------
-syntax enable
+syntax on
+filetype plugin indent on
 
 " Get truecolor support in the terminal; should work in tmux>=2.2
 set termguicolors
@@ -152,6 +152,16 @@ colorscheme PaperColor
 " -----------------------------------------------------------------------------
 " }}}
 
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+let g:haskell_indent_disable = 1
+
 let mapleader=","
 
 " Identify logical with visual lines when browsing around.
@@ -171,3 +181,38 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
+
+function! SetupHaskell()
+  setlocal tabstop=4
+endfunction
+
+augroup haskell
+  autocmd!
+  autocmd FileType haskell call SetupHaskell()
+augroup END
+
+function! GoyoQuit()
+  if exists('#goyo')
+    Goyo
+  endif
+  quit
+endfunction
+
+function! SetupEmail()
+  " When writing emails, I like to not have logical linebreaks inserted into
+  " my text. It's better to let my MUA flow the text usually.
+  setlocal tw=0
+  setlocal wrap
+  setlocal linebreak
+
+  " Using Goyo while writing emails makes writing more focused. However when I
+  " quit while in Goyo mode I just return to normal Vim. These abbrevs make
+  " quitting in Goyo equal to quitting Vim.
+  cabbrev <buffer> wq :w<CR>:call GoyoQuit()<CR>
+  cabbrev <buffer> q :call GoyoQuit()<CR>
+endfunction
+
+augroup email
+  autocmd!
+  autocmd BufNewFile,BufRead /tmp/neomutt/* call SetupEmail() | Goyo
+augroup END
