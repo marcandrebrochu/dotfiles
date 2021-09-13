@@ -7,10 +7,6 @@ set nocompatible
 " expressions, text stored in the viminfo file, etc.
 set encoding=utf-8
 
-" If in this many ms, nothing is typed, the swap file will be written to the
-" disk. Also used for the CursorHold autocommand event.
-set updatetime=300
-
 " Visualize trailing whitespaces.
 set listchars=trail:·
 set list
