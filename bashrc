@@ -32,3 +32,7 @@ source $XDG_CONFIG_HOME/xdg/user-dirs.dirs
 # prevents permission errors when installing stuff globally.
 export N_PREFIX="$HOME/.n"
 export PATH="$PATH:/$N_PREFIX/bin"
+
+# Simple prompt: CWD in mangenta. Continuation is empty.
+export PS1="\[\033[36m\]\w\[\033[m\] "
+export PS2=""
