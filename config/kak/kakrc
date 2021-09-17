@@ -1,3 +1,11 @@
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "andreyorst/plug.kak" noload
+
+plug "andreyorst/fzf.kak" config %{
+    map global normal '<c-p>' ': fzf-mode<ret>' -docstring 'fzf mode'
+    set-option global terminal 'st'
+}
+
 colorscheme tomorrow-night
 
 map global normal '#' :comment-line<ret>

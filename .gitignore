@@ -1,0 +1,4 @@
+config/kak/plugins/*
+!config/kak/plugins/plug.kak
+
+*.swp
