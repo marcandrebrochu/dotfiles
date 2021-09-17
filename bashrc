@@ -38,4 +38,4 @@ export PS1="\[\033[36m\]\w\[\033[m\] "
 export PS2=""
 
 # Tab autocompletion for haskell-stack
-eval "$(stack --bash-autocompletion-script stack)"
+eval "$(stack --bash-completion-script stack)"
