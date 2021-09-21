@@ -116,6 +116,8 @@ Plug 'weakish/rcshell.vim'
 Plug 'vmchale/dhall-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'lifepillar/vim-solarized8'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Goyo by default acts as a mode, which means that :q while in Goyo will just
@@ -187,6 +189,10 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
+
+" Fzf stuff.
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fb :Buffers<CR>
 
 " Editing Haskell {{{
 " -----------------------------------------------------------------------------
