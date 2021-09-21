@@ -191,8 +191,8 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
 " Fzf stuff.
-nnoremap <leader>ff :Files<CR>
-nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
 
 " Editing Haskell {{{
 " -----------------------------------------------------------------------------
