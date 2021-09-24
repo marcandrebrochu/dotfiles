@@ -11,6 +11,25 @@ set encoding=utf-8
 set listchars=trail:·
 set list
 
+set termguicolors
+
+lua require('plugins')
+
+let g:srcery_bg_passthrough = 1
+let g:srcery_italic = 1
+let g:srcery_italic_types = 1
+
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+let g:haskell_indent_disable = 1
+
+colorscheme srcery
+
 " Terminal behavior {{{
 " -----------------------------------------------------------------------------
 " Any bell is annoying as hell. This will disable both beeps and flashes.

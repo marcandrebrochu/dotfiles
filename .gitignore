@@ -1,4 +1,5 @@
 config/kak/plugins/*
+config/nvim/plugin
 !config/kak/plugins/plug.kak
 
 *.swp
