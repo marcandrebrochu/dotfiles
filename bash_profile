@@ -1,5 +1,3 @@
-eval `ssh-agent -s`
-
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Start X automatically when logging in on the first TTY.
