@@ -122,10 +122,6 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'srcery-colors/srcery-vim'
 call plug#end()
 
-let g:srcery_italic = 1
-let g:srcery_italic_types = 1
-let g:srcery_bg_passthrough = 1
-
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
 let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
@@ -167,6 +163,10 @@ filetype plugin indent on
 
 " Get truecolor support in the terminal; should work in tmux>=2.2
 set termguicolors
+
+let g:srcery_italic = 1
+let g:srcery_italic_types = 1
+let g:srcery_bg_passthrough = 1
 
 set background=dark
 colorscheme srcery
