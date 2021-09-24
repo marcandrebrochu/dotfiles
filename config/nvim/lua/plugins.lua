@@ -10,6 +10,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'srcery-colors/srcery-vim'
   use 'neovimhaskell/haskell-vim'
+  use 'neovim/nvim-lspconfig'
   use {
     'junegunn/fzf.vim',
     requires = {{'junegunn/fzf', run = function() fn['fzf#install']() end }}

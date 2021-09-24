@@ -14,6 +14,7 @@ set list
 set termguicolors
 
 lua require('plugins')
+lua require('lsp')
 
 let g:srcery_bg_passthrough = 1
 let g:srcery_italic = 1
@@ -152,6 +153,7 @@ syntax on
 filetype plugin indent on
 
 let mapleader=","
+let maplocalleader="\\"
 
 " Identify logical with visual lines when browsing around.
 nnoremap j gj
@@ -160,7 +162,9 @@ nnoremap k gk
 nnoremap <leader>z :Goyo<CR>
 
 nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>sc :source $MYVIMRC<CR>
+nnoremap <leader>se :e $MYVIMRC<CR>
 
 " Clear search highlighting and register.
 nnoremap <leader>/ :let @/=''<CR>:set nohlsearch<CR>
