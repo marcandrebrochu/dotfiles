@@ -119,7 +119,12 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'srcery-colors/srcery-vim'
 call plug#end()
+
+let g:srcery_italic = 1
+let g:srcery_italic_types = 1
+let g:srcery_bg_passthrough = 1
 
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
@@ -163,20 +168,8 @@ filetype plugin indent on
 " Get truecolor support in the terminal; should work in tmux>=2.2
 set termguicolors
 
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default.dark': {
-  \       'transparent_background': 0,
-  \       'override': {
-  \         'color00': ['#040402', 23],
-  \         'linenumber_bg': ['#0a0a09', 23]
-  \       }
-  \     }
-  \   }
-  \ }
-
 set background=dark
-colorscheme PaperColor
+colorscheme srcery
 " -----------------------------------------------------------------------------
 " }}}
 
@@ -189,7 +182,9 @@ nnoremap k gk
 nnoremap <leader>z :Goyo<CR>
 
 nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>sc :source $MYVIMRC<CR>
+nnoremap <leader>se :e $MYVIMRC<CR>
 
 " Clear search highlighting and register.
 nnoremap <leader>/ :let @/=''<CR>:set nohlsearch<CR>
