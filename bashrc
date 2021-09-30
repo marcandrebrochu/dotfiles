@@ -1,4 +1,5 @@
 export PATH="$PATH:$HOME/.local/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin"
+export PATH="$PATH:$HOME/.scripts"
 
 alias ll="ls -l --color=auto --group-directories-first"
 alias ls="ls --color=auto --group-directories-first"
