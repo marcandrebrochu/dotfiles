@@ -3,6 +3,9 @@
 " I don't care about Vim being Vi-compatible.
 set nocompatible
 
+" But still, don't wait on ESC key.
+set noesckeys
+
 " Character encoding, applies to text in buffers, registers, Strings in
 " expressions, text stored in the viminfo file, etc.
 set encoding=utf-8
