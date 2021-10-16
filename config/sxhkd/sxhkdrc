@@ -1,0 +1,17 @@
+F1
+  setxkbmap -layout us
+
+F2
+  setxkbmap ca -variant multi
+
+F3
+  setxkbmap ru -variant phonetic
+
+super + shift + backslash
+  killall -SIGUSR1 sxhkd
+
+super + m
+  st neomutt
+
+super + shift + m ; {i,a}
+  mbsync {inbox,all}
