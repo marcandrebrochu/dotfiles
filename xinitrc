@@ -20,7 +20,7 @@ setxkbmap -option caps:swapescape # swap escape with caps lock
 feh --no-fehbg --bg-fill '/home/mab/.background-art/Vermeer/TGWTPE.jpg'
 
 # For my keybindings.
-sxhkd
+sxhkd &
 
 # Replace the current shell with the dwm process.
 exec dwm
