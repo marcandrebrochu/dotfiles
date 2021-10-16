@@ -114,7 +114,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'elzr/vim-json'
-Plug 'kovetskiy/sxhkd-vim'
+Plug 'marcandrebrochu/sxhkd-vim'
 Plug 'weakish/rcshell.vim'
 Plug 'vmchale/dhall-vim'
 Plug 'junegunn/goyo.vim'
