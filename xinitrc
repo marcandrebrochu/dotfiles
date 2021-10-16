@@ -19,8 +19,8 @@ setxkbmap -option caps:swapescape # swap escape with caps lock
 # Set a background image.
 feh --no-fehbg --bg-fill '/home/mab/.background-art/Vermeer/TGWTPE.jpg'
 
-# For my keybindings. TODO use sxkbd
-#xbindkeys
+# For my keybindings.
+sxhkd
 
 # Replace the current shell with the dwm process.
 exec dwm
