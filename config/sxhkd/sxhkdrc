@@ -7,6 +7,12 @@ F2
 F3
   setxkbmap ru -variant phonetic
 
+{XF86AudioMute,XF86AudioLowerVolume,XF86AudioRaiseVolume}
+  amixer -q -c 0 set Master {toggle,5%-,5%+}
+
+XF86AudioMicMute
+  amixer -q -c 0 set Capture toggle
+
 super + shift + backslash
   killall -SIGUSR1 sxhkd
 
